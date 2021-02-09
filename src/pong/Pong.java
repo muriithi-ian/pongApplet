@@ -12,45 +12,55 @@ public class Pong extends Applet implements Runnable, KeyListener {
     HumanPaddle p2;
     Ball b1;
     boolean gameStarted, gameOver;
+    Graphics gfx;
+    Image img;
 
     public void init() {
         this.resize(WIDTH, HEIGHT);
         gameStarted = false;
+        this.addKeyListener(this);
         gameOver = false;
         p1 = new HumanPaddle(1);
         p2 = new HumanPaddle(2);
         b1 = new Ball();
-        this.addKeyListener(this);
+        img = createImage(WIDTH, HEIGHT);
+        gfx = img.getGraphics();
 
         thread = new Thread(this);
         thread.start();
     }
 
     public void paint(Graphics g) {
-        g.setColor(Color.BLACK);
-        g.fillRect(0, 0, WIDTH, HEIGHT);
-        g.setColor(Color.white);
+        gfx.setColor(Color.BLACK);
+        gfx.fillRect(0, 0, WIDTH, HEIGHT);
+        gfx.setColor(Color.white);
         String p1Score ="PLAYER 1: " + p1.getScore();
         String p2Score ="PLAYER 2: " + p2.getScore();
-        g.drawString(p1Score, 30,50);
-        g.drawString(p2Score, 600, 50);
+        gfx.drawString(p1Score, 30,50);
+        gfx.drawString(p2Score, 600, 50);
         if (b1.getX() < -10 || b1.getX() > 710) {
             gameOver = true;
-            g.setColor(Color.WHITE);
+            gfx.setColor(Color.WHITE);
             String winner;
             if(p1.getScore()>p2.getScore()){
                 winner = "Game over!!!\nPlayer 1 wins";
             }else{
                 winner = "Game over!!!\nPlayer 2 wins";
             }
-            g.drawString(winner, 320, 250);
+            gfx.drawString(winner, 320, 250);
             gameStarted = false;
         }
 
-        p1.draw(g);
-        p2.draw(g);
-        b1.draw(g);
+        p1.draw(gfx);
+        p2.draw(gfx);
+        b1.draw(gfx);
 
+        if(!gameStarted){
+            gfx.setColor(Color.WHITE);
+            gfx.drawString("Pongg", 340, 100);
+            gfx.drawString("Press enter to start...", 310, 130);
+        }
+    g.drawImage(img, 0, 0, this);
 
     }
 
