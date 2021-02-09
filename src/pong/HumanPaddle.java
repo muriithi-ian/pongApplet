@@ -7,6 +7,7 @@ public class HumanPaddle implements Paddle {
     double y, yVel;
     boolean upAccel, downAccel;
     int player, x;
+    int score = 0;
 
     public HumanPaddle(int player) {
         y = 210;
@@ -57,5 +58,13 @@ public class HumanPaddle implements Paddle {
 
     public int getY() {
         return (int) y;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore() {
+        this.score += 1;
     }
 }

@@ -20,13 +20,27 @@ public class Ball {
     public void move() {
         x += xVel;
         y += yVel;
-        if(y<10){
+        if (y < 10) {
             yVel = -yVel;
-        }
-        else if(y>490){
+        } else if (y > 490) {
             yVel = -yVel;
         }
     }
+
+    public void checkForCollision(HumanPaddle p1, HumanPaddle p2) {
+        if (x <= 50) {
+            if (y >= p1.getY() && y <= p1.getY() + 80) {
+                xVel = -xVel;
+                p1.setScore();
+            }
+        } else if (x >= 650) {
+            if (y >= p2.getY() && y <= p2.getY() + 80) {
+                xVel = -xVel;
+                p2.setScore();
+            }
+        }
+    }
+
 
     public int getX() {
         return (int) x;
