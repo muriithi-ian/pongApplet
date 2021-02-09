@@ -9,10 +9,12 @@ public class Pong extends Applet implements Runnable, KeyListener {
     final int WIDTH = 700, HEIGHT = 500;
     Thread thread;
     HumanPaddle p1;
+    Ball b1;
 
     public void init() {
         this.resize(WIDTH, HEIGHT);
         p1 = new HumanPaddle(1);
+        b1 = new Ball();
         this.addKeyListener(this);
 
         thread = new Thread(this);
@@ -22,7 +24,12 @@ public class Pong extends Applet implements Runnable, KeyListener {
     public void paint(Graphics g) {
         g.setColor(Color.BLACK);
         g.fillRect(0, 0, WIDTH, HEIGHT);
+        if(b1.getX()<-10||b1.getX()>710){
+            g.setColor(Color.WHITE);
+            g.drawString("GAME OVER!", 350, 250);
+        }
         p1.draw(g);
+        b1.draw(g);
     }
 
     public void update(Graphics g) {
@@ -33,6 +40,7 @@ public class Pong extends Applet implements Runnable, KeyListener {
         for (; ; ) {
 
             p1.move();
+            b1.move();
 
             repaint();
             try {
