@@ -1,34 +1,36 @@
 
-P
-java:S1874".Remove this use of "Applet"; it is deprecated.(ÏÅÅ¸ùÿÿÿÿ8Á¾Ÿ½ø.
-A
-java:S1948"$Make "p1" transient or serializable.(¹¯Õ¸8¿ìÒ¾ø.
-W
-java:S11619":Add the "@Override" annotation above this method signature(æìÑº8Õ£ôÀø.
+c
+java:S2142T"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Õ£ôÀø.
 H
 java:S1659"&Declare "gameOver" on a separate line.(Ú·Óıÿÿÿÿ8ÒÒÎÀø.
 W
-java:S1161":Add the "@Override" annotation above this method signature( Üó8Í£¸½ø.
-@
-java:S1659	"$Declare "HEIGHT" on a separate line.(Š¸æ48¨‹ì½ø.
-W
-java:S1161":Add the "@Override" annotation above this method signature(¶øÂÁ8°éº½ø.
+java:S1161!":Add the "@Override" annotation above this method signature(¶øÂÁ8°éº½ø.
 =
 java:S1170	"!Make this final field static too.(Š¸æ48¨‹ì½ø.
-F
-java:S1948"$Make "p2" transient or serializable.(ÉÃïîûÿÿÿÿ8ıÆªÀø.
-A
-java:S1948"$Make "b1" transient or serializable.(â™„×8†°¿ø.
-=
-java:S1170	"!Make this final field static too.(Š¸æ48¨‹ì½ø.
-
-java:S1186P"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(÷—8Õ£ôÀø.
-l	java:S116	"QRename this field "HEIGHT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¸æ48¨‹ì½ø.
-k	java:S116	"PRename this field "WIDTH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¸æ48¨‹ì½ø.
-?
-java:S2189>""Add an end condition to this loop.(´ÿÕ™8Õ£ôÀø.
-c
-java:S2142J"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8Õ£ôÀø.
 E
 java:S1948
 "(Make "thread" transient or serializable.(óÍİŠ8Š„—¾ø.
+P
+java:S1874".Remove this use of "Applet"; it is deprecated.(ÏÅÅ¸ùÿÿÿÿ8Á¾Ÿ½ø.
+A
+java:S1948"%Make "img" transient or serializable.(»Ä­'8™¾ÃÇø.
+=
+java:S1170	"!Make this final field static too.(Š¸æ48¨‹ì½ø.
+W
+java:S1161C":Add the "@Override" annotation above this method signature(æìÑº8Õ£ôÀø.
+k	java:S116	"PRename this field "WIDTH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¸æ48¨‹ì½ø.
+G
+java:S1948"%Make "gfx" transient or serializable.(™£¢Ëúÿÿÿÿ8™¾ÃÇø.
+@
+java:S1659	"$Declare "HEIGHT" on a separate line.(Š¸æ48¨‹ì½ø.
+
+java:S1186Z"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(÷—8Õ£ôÀø.
+A
+java:S1948"$Make "p1" transient or serializable.(¹¯Õ¸8ƒ•ÔÚø.
+l	java:S116	"QRename this field "HEIGHT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š¸æ48¨‹ì½ø.
+F
+java:S1948"$Make "p2" transient or serializable.(ÉÃïîûÿÿÿÿ8¸¹ÔÚø.
+?
+java:S2189H""Add an end condition to this loop.(´ÿÕ™8Õ£ôÀø.
+W
+java:S1161":Add the "@Override" annotation above this method signature( Üó8Í£¸½ø.

@@ -8,8 +8,8 @@ import java.awt.event.KeyListener;
 public class Pong extends Applet implements Runnable, KeyListener {
     final int WIDTH = 700, HEIGHT = 500;
     Thread thread;
-    HumanPaddle p1;
-    HumanPaddle p2;
+    Paddle p1;
+    Paddle p2;
     Ball b1;
     boolean gameStarted, gameOver;
     Graphics gfx;
@@ -34,33 +34,34 @@ public class Pong extends Applet implements Runnable, KeyListener {
         gfx.setColor(Color.BLACK);
         gfx.fillRect(0, 0, WIDTH, HEIGHT);
         gfx.setColor(Color.white);
-        String p1Score ="PLAYER 1: " + p1.getScore();
-        String p2Score ="PLAYER 2: " + p2.getScore();
-        gfx.drawString(p1Score, 30,50);
+        String p1Score = "PLAYER 1: " + p1.getScore();
+        String p2Score = "PLAYER 2: " + p2.getScore();
+        gfx.drawString(p1Score, 30, 50);
         gfx.drawString(p2Score, 600, 50);
-        if (b1.getX() < -10 || b1.getX() > 710) {
+        if (b1.getX() < 0 || b1.getX() > 700) {
             gameOver = true;
+            gameStarted = false;
+
             gfx.setColor(Color.WHITE);
             String winner;
-            if(p1.getScore()>p2.getScore()){
+            if (p1.getScore() > p2.getScore()) {
                 winner = "Game over!!!\nPlayer 1 wins";
-            }else{
+            } else {
                 winner = "Game over!!!\nPlayer 2 wins";
             }
             gfx.drawString(winner, 320, 250);
-            gameStarted = false;
         }
 
         p1.draw(gfx);
         p2.draw(gfx);
         b1.draw(gfx);
 
-        if(!gameStarted){
+        if (!gameStarted) {
             gfx.setColor(Color.WHITE);
             gfx.drawString("Pongg", 340, 100);
             gfx.drawString("Press enter to start...", 310, 130);
         }
-    g.drawImage(img, 0, 0, this);
+        g.drawImage(img, 0, 0, this);
 
     }
 

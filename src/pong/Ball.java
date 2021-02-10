@@ -40,7 +40,7 @@ public class Ball {
         }
     }
 
-    public void checkForCollision(HumanPaddle p1, HumanPaddle p2) {
+    public void checkForCollision(Paddle p1, Paddle p2) {
         if (x <= 50) {
             if (y >= p1.getY() && y <= p1.getY() + 80) {
                 xVel = -xVel;

@@ -1,14 +1,14 @@
 
+T
+java:S2589""7Remove this expression which always evaluates to "true"(§Ïèß8¼Óå¾ø.
+:
+java:S1659	"Declare "x" on a separate line.(şõ ëúÿÿÿÿ
+n	java:S116"RRename this field "GRAVITY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£–Ö÷8€ñî¾ø.
 >
 java:S1170"!Make this final field static too.(£–Ö÷8€ñî¾ø.
-=
-java:S1659"'Declare "downAccel" on a separate line.(Çõö³
 =
 java:S1659""Declare "yVel" on a separate line.(Öé…úıÿÿÿÿ
 T
 java:S2589""7Remove this expression which always evaluates to "true"(§Ïèß8¼Óå¾ø.
-T
-java:S2589""7Remove this expression which always evaluates to "true"(§Ïèß8¼Óå¾ø.
-n	java:S116"RRename this field "GRAVITY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£–Ö÷8€ñî¾ø.
-:
-java:S1659	"Declare "x" on a separate line.(şõ ëúÿÿÿÿ
+=
+java:S1659"'Declare "downAccel" on a separate line.(Çõö³
